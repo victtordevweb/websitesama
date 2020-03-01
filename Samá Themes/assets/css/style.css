@@ -1214,7 +1214,7 @@ p {
     opacity: 0;
 }
 .single-work .work-overlay .work-content ul li a {
-    width: 75%;
+    width: 65%;
     display: flex;
     align-items: center;
     line-height: 25px;
@@ -1227,7 +1227,7 @@ p {
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
-    border-radius: 5px;
+    border-radius: 50px;
     margin:  auto;
     padding: 10px 0;
     justify-content: center;
