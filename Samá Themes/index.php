@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="pt-BR">
 
@@ -388,19 +391,19 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-form pt-30">
-                        <form id="contact-form" action="assets/contact.php">
+                        <form method="post" id="contact-form" action="assets/contact.php">
                             <div class="single-form">
-                                <input type="text" name="name" placeholder="Name">
+                                <input type="text" name="name" placeholder="Nome">
                             </div> <!-- single form -->
                             <div class="single-form">
                                 <input type="email" name="email" placeholder="Email">
                             </div> <!-- single form -->
                             <div class="single-form">
-                                <textarea name="message" placeholder="Message"></textarea>
+                                <textarea name="message" placeholder="Mensagem"></textarea>
                             </div> <!-- single form -->
-                            <p class="form-message"></p>
+                            <p class="form-message"><?php if(isset($_SESSION['msg_info'])){ echo $_SESSION['msg_info']; session_destroy();}?></p>
                             <div class="single-form">
-                                <button class="main-btn" type="submit">Send Message</button>
+                                <button class="main-btn" type="submit">Enviar mensagem</button>
                             </div> <!-- single form -->
                         </form>
                     </div> <!-- contact form -->
