@@ -32,28 +32,8 @@ const SMTHEMESFUNCTIONS = {
         }).join('');
 
         $('#content_portfolio').html(HTMPortoflio);
-    },
-
-    // Renderiza Dúvidas Frequentes
-    renderDoubt(){
-        let HTMDoubt = SMTHEMESOBJECT.Doubt.map((item,index)=>{
-            return `
-            <div class="col-lg-12 px-0 py-0 item-doubt mb-3">
-                <div class="accordion_item doubt-item--single-doubt">
-                    <div class="accordion_target px-4 py-4 single-doubt--header ${index == 0 ? 'accordion_active' : ''}">
-                        <h4 class="header--title-doubt">${item.title} <i class="lni float-right position-relative lni-chevron-down"></i></h4>
-                    </div>
-                    <div class="accordion_content mx-4 single-doubt--body" style="display:${index == 0 ? 'block' : 'none'};">
-                        <div class="body--text-doubt pt-3 pb-4">
-                            ${item.content}
-                        </div>
-                    </div>
-                </div>
-            </div>`;
-        }).join('');
-
-        $('#content_doubt').html(HTMDoubt);
     }
+
 
 }
 
@@ -65,6 +45,4 @@ const SMTHEMESFUNCTIONS = {
 
 
 SMTHEMESFUNCTIONS.renderPortFolio();
-SMTHEMESFUNCTIONS.renderDoubt();
-
 SMTHEMESFUNCTIONS.accordionCustom();

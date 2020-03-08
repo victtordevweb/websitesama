@@ -866,13 +866,13 @@ p {
     margin-left: 0;
 }
 .header-social .header-social-icon ul li a {
-    color: #ccc;
+    color: #754ef9;
     font-size: 20px;
     width: 40px;
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
-    border: 1px solid #ccc;
+    border: 1px solid #754ef9;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -1453,12 +1453,13 @@ p {
 .contact-box {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 30px 35px;
+    padding: 23.5px 35px;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
+    border-radius: 5px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .contact-box {
@@ -1500,14 +1501,14 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
 .single-form {
     margin-top: 30px;
 }
-.single-form input, .single-form textarea {
+.single-form input, .single-form textarea, .single-form select {
     width: 100%;
     height: 55px;
     border-radius: 5px;
     border: 1px solid #ddd;
     padding: 0 25px;
     font-size: 16px;
-    color: #8a8fa3;
+    color: #7650f9;
 }
 .single-form input.placeholder, .single-form textarea.placeholder {
     opacity: 1;
@@ -1525,13 +1526,20 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
     opacity: 1;
     color: #8a8fa3;
 }
-.single-form input:focus, .single-form textarea:focus {
+.single-form input:focus, .single-form textarea:focus, .single-form select:focus{
+    outline:none;
     border-color: #754ef9;
 }
 .single-form textarea {
     height: 135px;
     padding-top: 10px;
     resize: none;
+}
+.single-form.subject-form option {
+    font-size: 17px;
+}
+.single-form.subject-form option:not([disabled]) {
+    color: #152136;
 }
 .contact-map .gmap_canvas iframe {
     width: 100%;
@@ -1616,9 +1624,8 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
     bottom: 20px;
     width: 50px;
     height: 50px;
-    line-height: 46px;
+    line-height: 52px;
     border-radius: 50%;
-    border: 2px solid #586376;
     background-color: #152136;
     text-align: center;
     z-index: 99;
