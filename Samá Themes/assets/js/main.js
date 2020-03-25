@@ -59,7 +59,7 @@
     // Parallaxmouse js
     
     function parallaxMouse() {
-        if ($('#parallax').length) {
+        if ($('#parallax').length > 0) {
             var scene = document.getElementById('parallax');
             var parallax = new Parallax(scene);
         };
@@ -79,21 +79,22 @@
     
     
     //===== Counter Up
-    
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1600,
-    });
-    
+    if($('.counter').length > 0){
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1600,
+        });
+    }
     
     //===== Magnific Popup
-    
-    $('.image-popup').magnificPopup({
-      type: 'image',
-      gallery:{
-        enabled:true
-      }
-    });
+    if($('.image-popup').length > 0){
+        $('.image-popup').magnificPopup({
+            type: 'image',
+            gallery:{
+                enabled:true
+            }
+        });
+    }
     
     
     //===== Back to top
@@ -117,8 +118,20 @@
         }, 1000);
     });
     
-
-    
+    $(window).on('load',function(){
+        //Animate the scroll to item if exits hash in url;
+        var hashUrl = window.location.hash;
+        if(hashUrl){
+            if($(`${hashUrl}`).length > 0){
+                let itemOffSetTop = $(`${hashUrl}`)[0].offsetTop - 73;
+                console.log(itemOffSetTop, $(`${hashUrl}`)[0].offsetTop);
+                window.location.hash = ''
+                $('html, body').animate({
+                    scrollTop: itemOffSetTop,
+                }, 1000);
+            }
+        }
+    });
     //===== 
     
     
