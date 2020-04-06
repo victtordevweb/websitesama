@@ -1,6 +1,10 @@
 :root {
     --primary-color: #754ef9;
 }
+.container {
+    width: 1280px;
+    max-width: 100%;
+}
 
 /* ACCORDION */
 .accordion_target > * {
@@ -90,10 +94,9 @@
 }
 
 /* CONTATO */
-.contact-box a {
+.contact-box a, select.value-form.adjust-item.no-value {
     color: #8a8fa3;
 }
-
 
 /* FOOTER */
 .footer-widget:before {

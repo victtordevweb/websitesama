@@ -7,6 +7,7 @@ body {
     font-style: normal;
     color: #8a8fa3;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -127,7 +128,6 @@ p {
 .section-title .title {
     font-weight: 700;
     font-size: 45px;
-    color: #000;
     padding-bottom: 20px;
 }
 @media (max-width: 767px) {
@@ -484,7 +484,9 @@ p {
 }
 .navigation .navbar .navbar-brand {
     padding-top: 0;
-    padding-bottom: 5px;
+    padding-bottom: 5px;    
+    position: relative;
+    top: -4px;
 }
 .navigation .navbar .navbar-toggler {
     padding: 2px 6px;
@@ -1626,7 +1628,7 @@ p.form-message.success.form-message.error, p.form-message.error.form-message.err
     height: 50px;
     line-height: 52px;
     border-radius: 50%;
-    background-color: #152136;
+    background-color: #32333c;
     text-align: center;
     z-index: 99;
     -webkit-transition: all 0.3s ease-out 0s;

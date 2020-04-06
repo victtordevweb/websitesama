@@ -1,3 +1,31 @@
+const fn = {
+    submitForm(idForm){
+        $(idForm).on('submit', function(e){
+            e.preventDefault();
+            let itemsForm = [...$(this)[0].elements]
+            window.arrayTxt = [];
+
+            itemsForm.forEach((item)=>{
+                if(item.type !== 'submit'){
+                    if($(item).val()){
+                        if($(item).val().length > 2){
+                            let key = $(item).attr('data-item')
+                            let value = $(item).val()
+                            arrayTxt.push(`*${key}:* ${value}`);
+                        }
+                    }
+                }
+            });
+            window.open(`https://api.whatsapp.com/send?phone=558192965137&text=${arrayTxt.join('%0a')}`);
+        });
+
+        // adjust item select
+        $('select.adjust-item').change(function(){
+            $(this).removeClass('no-value')
+        });
+    }
+}
+
 const SMTHEMESFUNCTIONS = {
     accordionCustom(){
         $(document).on('click', '.accordion_item .accordion_target', function(){
@@ -33,8 +61,6 @@ const SMTHEMESFUNCTIONS = {
 
         $('#content_portfolio').html(HTMPortoflio);
     }
-
-
 }
 
 
@@ -46,3 +72,4 @@ const SMTHEMESFUNCTIONS = {
 
 SMTHEMESFUNCTIONS.renderPortFolio();
 SMTHEMESFUNCTIONS.accordionCustom();
+fn.submitForm('#contact-form');
